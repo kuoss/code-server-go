@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: code-server-go
+spec:
+  selector:
+    matchLabels:
+      app: code-server-go
+  template:
+    metadata:
+      labels:
+        app: code-server-go
+    spec:
+      containers:
+      - name: code-server-go
+        image: ghcr.io/kuoss/code-server-go:4.16.1-go1.20.8
+        env:
+        - name: PASSWORD
+          value: code-server-go

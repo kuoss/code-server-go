@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: code-server-go
+spec:
+  rules:
+  - host: code-server-go.example.com
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        backend:
+          service:
+            name: code-server-go
+            port:
+              number: 8080
+  tls:
+  - hosts:
+    - code-server-go.example.com
+    secretName: example-com-tls
