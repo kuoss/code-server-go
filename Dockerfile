@@ -11,4 +11,11 @@ RUN set -x \
 && rm -f go${GO_VERSION}.linux-amd64.tar.gz \
 && echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile \
 && go version
+RUN set -x \
+&& go install golang.org/x/tools/gopls@latest \
+&& go install golang.org/x/tools/cmd/goimports@latest \
+&& go install honnef.co/go/tools/cmd/staticcheck@latest \
+&& echo
+RUN set -x \
+&& code-server --install-extension golang.go
 WORKDIR /root/go
