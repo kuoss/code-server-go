@@ -13,7 +13,7 @@ spec:
             name: code-server-go
             port:
               number: 8080
-  tls:
-  - hosts:
-    - code-server-go.example.com
-    secretName: example-com-tls
+  # tls:
+  # - hosts:
+  #   - code-server-go.example.com
+  #   secretName: example-com-tls
