@@ -1,7 +1,7 @@
 FROM codercom/code-server:4.16.1
 
 USER root
-ENV GO_VERSION 1.20.8
+ENV GO_VERSION 1.21.1
 ENV PATH=/root/go/bin:/usr/local/go/bin:$PATH
 COPY .bashrc /root/.bashrc
 
@@ -11,6 +11,7 @@ RUN set -x \
 && tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz \
 && rm -f go${GO_VERSION}.linux-amd64.tar.gz \
 && echo 'export PATH=/root/go/bin:/usr/local/go/bin:$PATH' >> ~/.profile \
+&& mkdir -p /root/go/src \
 && go version
 
 RUN set -x \
