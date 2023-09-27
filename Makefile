@@ -1,4 +1,6 @@
-IMAGE=ghcr.io/kuoss/code-server-go:4.16.1-go1.20.8
+TAG=development
+IMAGE=ghcr.io/kuoss/code-server-go:$(TAG)
 
 build:
-	docker build -t $(IMAGE) . &&	docker push $(IMAGE)
+	docker build -t $(IMAGE) .
+
