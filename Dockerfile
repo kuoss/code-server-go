@@ -1,6 +1,6 @@
 FROM codercom/code-server:4.17.1
 USER root
-ENV GO_VERSION 1.21.1
+ENV GO_VERSION 1.21.3
 ENV PATH=/root/go/bin:/usr/local/go/bin:$PATH
 COPY .bashrc /root/.bashrc
 
