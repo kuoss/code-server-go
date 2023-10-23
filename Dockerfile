@@ -1,4 +1,4 @@
-FROM codercom/code-server:4.17.1
+FROM codercom/code-server:4.18.0
 USER root
 ENV GO_VERSION 1.21.3
 ENV PATH=/root/go/bin:/usr/local/go/bin:$PATH
